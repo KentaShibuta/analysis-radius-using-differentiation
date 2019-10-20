@@ -1,7 +1,7 @@
 # include<stdio.h>
 # include<math.h>
 int main(void){
-   int nnode = 1001;
+   int nnode = 101;
    double data[nnode][2];
    // 楕円曲線上の座標をファイルから読み込み，各座標における曲率を算出する
    FILE *fp;
