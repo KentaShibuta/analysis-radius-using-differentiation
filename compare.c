@@ -5,7 +5,7 @@ int main(void){
    double data[nnode][2];
    // 楕円曲線上の座標をファイルから読み込み，各座標における曲率を算出する
    FILE *fp;
-   char file_name[100] = "楕円_a_1_b_3_0_001刻み_2.csv";
+   char file_name[100] = "楕円_a_1_b_3_0_01刻み_2.csv";
 
    printf(">>> read the %s\n", file_name);
     if((fp = fopen(file_name, "r")) == NULL) {
@@ -62,6 +62,6 @@ int main(void){
    for(i=0; i<nnode; i++){
       fprintf(fp, "%d, %23,15e, %23,15e, %23,15e\n", i, data[i][0], data[i][1], 1.0/rho[i]);
    }
-   fclone(fp);
+   fclose(fp);
    return 0;
 }
